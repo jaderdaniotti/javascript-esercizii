@@ -612,14 +612,28 @@
 // Se un numero non è multiplo né di 3 né di 5, allora stampa il numero
 // Come output della funzione, voglio che mi venga ritornato il numero di stringhe
 // stampate.
+// let N = prompt("Inserisci un numero max");
+// function stampaNumeri(N) {
+//     let counter = 0;
+//     for (let i = 1; i <= N; i++) {   
+//         if (i%3 == 0 && i%5 == 0){
+//             console.log("Fizzbuzz");
+//             counter+=1;
+//         } else if (i%5 == 0){
+//             console.log("Buzz");
+//             counter+=1;
+//         } else if (i%3 == 0) {
+//             console.log("Fizz");
+//             counter+=1;
+//         } else {
+//             console.log(i);
+//         }
+        
+//     }
+//     return counter;
+// }
+// console.log(stampaNumeri(N));
 
-let N = prompt("Inserisci un numero max");
-function stampaNumeri(N) {
-    for (let i = 0; i <= N; i++) {
-        
-        
-    }
-}
 
 //-----------------------------------------------------------------------------------//
 // SCrivere una funzione che ci calcola lo sconto da effettuare su un determinato
@@ -628,6 +642,15 @@ function stampaNumeri(N) {
 // Come output, avremo l’importo aggiornato.
 // Stampare in console “Il prezzo dopo lo sconto è di …. “
 
+// function offerta(price, promo) {
+//     let finalPrice= 0
+//     finalPrice = (price * promo / 100);
+//     return finalPrice;
+// }
+// console.log(offerta(30, 50));
+// console.log(offerta(20, 10));
+
+
 
 //----------------------------------------------------------------------------------//
 // In un e-commerce, i prezzi dei prodotti sono memorizzati in un array. Scrivi una
@@ -635,8 +658,47 @@ function stampaNumeri(N) {
 // prezzi dei prodotti) e un booleano “max” che specifica se vogliamo il massimo o il
 // minimo.
 // Nota: Questo esercizio è stato pensato per essere risolto SENZA metodi degli array.
-// let prices = [299.99, 159.99, 499.99, 99.99, 79.99, 649.99];
 
+//  let prices = [299.99, 159.99, 499.99, 99.99];
+//  let max= true;
+//       function highestOrLowers(prices, max){
+//           let highest= prices[0];
+//           let lowest= prices[0];
+//           if (!max) {
+//              for (let i = 0; i <= prices.length-1; i++) {
+//                  if (prices[i]<lowest) {
+//                      lowest= prices[i];
+//                  }   
+//              }
+//              console.log(`${lowest}  è il prezzo minore`);
+//          }
+//           if (max) {
+//               for (let i = 0; i <= prices.length-1; i++) {
+//                   if (prices[i]>highest) {
+//                       highest= prices[i];
+//                   }                  
+//               } 
+//               console.log(`${highest}  è il prezzo maggiore`);
+//           }
+         
+//       }
+//       highestOrLowers(prices, max);
+        /////////////////////////////////////////////////////////////////////////////
+    //     function highestOrLowers(prices){
+    //      if (prices[0]>prices[1] && prices[0]>prices[2] && prices[0]>prices[3]) {
+    //          console.log(prices[0])
+    //      }else if (prices[1]>prices[0] && prices[1]>prices[2] && prices[1]>prices[3]) {
+    //          console.log(prices[1])
+    //      }else if (prices[2]>prices[0] && prices[2]>prices[1] && prices[2]>prices[3]) {
+    //          console.log(prices[2])
+    //      }else if (prices[3]>prices[0] && prices[3]>prices[1] && prices[3]>prices[2]) {
+    //          console.log(prices[3])
+    //      } 
+    //      return max;             
+    // }
+        ////////////////////////////////////////////////////////////////////////////////
+
+ 
 
 //----------------------------------------------------------------------------------//
 // Dato l’array greetings, scrivere una funzione (mediante arrow function) che conta
@@ -649,9 +711,25 @@ function stampaNumeri(N) {
 //     console.log(countWords(greetings, "ciao")); // Output: 3
 //     console.log(countWords(greetings)); // Output: 2
 
+// let greetings = ["ciao", "good morning", "ciao", "default", "ciao", "hello", "default", "bonjour", "buenos dias"];
+// const countWords = (greetings, word="default") => {
+//     let output= 0;
+//     for (let i = 0; i <= greetings.length; i++) {
+//         if (greetings[i] == word) {
+//             output= output + 1;  
+//         } 
+//     }
+//     return output;
+// }
+// console.log(countWords(greetings));
+// console.log(countWords(greetings, "ciao"));
+
 //----------------------------------------------------------------------------------//
 // Metodo degli array .filter()
 // Scrivere una funzione che, dato un array di numeri rappresentanti le età, restituisca un
 // nuovo array contenente solo le età delle persone maggiorenni.
 // N.B. come visto a lezione, il metodo filter ci ritorna un nuovo array.
 // let ages= [17, 22, 15, 19, 12, 21, 16, 84, 61, 33, 17, 29, 48];
+
+// let adults = ages.filter((ages)=> ages >=18);
+// console.log(adults);
