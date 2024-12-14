@@ -396,79 +396,68 @@
 // ○ Usa un ciclo while.
 // ○ Usa un ciclo do...while.
 
-// for (let i = 0; i < 11; i++) {
-//     console.log(i)   
+// for (let i = 1; i <= 10; i++) {
+//     console.log(i);
 // }
-// console.log("fine");
-
-// let i = 0
-// while (i < 10) {
-//     i++
-//     console.log(i)
+// console.log("Fine ciclo for");
+// let a = 0;
+// while (a<10) {
+//     a++;
+//     console.log(a);
 // }
-// console.log("ciclo terminato")
-
-
-// let i = 1;
-
+// console.log("Fine ciclo while");
+// let b = 1;
 // do {
-//   console.log(i);
-//   i++;
-// } while (i <= 10);
-
-// console.log("ciclo terminato");
-
+//     console.log(b);
+//     b++;
+// } while (b<=9);
+// console.log(b);
+// console.log("Fine ciclo do-while")
 //-------------------------------------------------------------------//
 
 // Stampare i numeri pari tra 1 e 20
  // ○ Scrivi un ciclo for che stampa solo numeri pari.
 
-// for (let i = 2; i <= 20; i=i+2) {
-//     console.log(i);
-    
-// }
-    // let somma = 0
-    // for (let i = 0; i < 20; i++) {
-    //     if (i%2 !== 0) {
-    //         i++ 
-    //     }
-    //     console.log(i);
-    // }
+//  for (let i = 0; i <= 20; i++) {
+//     if (i%2 == 0) {
+//         console.log(i);
+//     }
+//  }
 
 //-----------------------------------------------------------------//
 // Stampare una tabellina
 // ○ Usa un ciclo for per stampare la tabellina del 5 (esempio: 5 x 1 = 5, 5 x 2 =
 // 10, ... fino a 5 x 10).
 
+// let num = 5;
 // for (let i = 1; i <= 10; i++) {
-//     let Moltiplicazione = 5 * i;
-//     console.log(`5 x ${i} = ${Moltiplicazione}`);
+//     let result = 5 * i;
+//     console.log(`${num} x ${i} = ${result}`);
 // }
 
 //---------------------------------------------------------------------//
 // Somma di numeri consecutivi
 // ○ Usa un ciclo while per sommare i numeri da 1 a 10 e stampare il risultato
 // totale.
-// let somma = 0
-// let i = 1;
-// while (i <= 10) { 
-//     somma=somma+i;
-//     console.log(`il risultato è ${somma}`)
+//     let i = 0;
+//     let somma = 0;
+// while (i<10) {
 //     i++;
+//     somma += i;
 // }
+// console.log(somma);
 
 
 //---------------------------------------------------------------------//
 // Conta fino a un numero specifico
 // ○ Chiedi all'utente di inserire un numero (usa prompt o una variabile dichiarata)
 // e usa un ciclo do...while per contare fino a quel numero.
-// let i = 1
-// let numero = prompt ("Inserisci un numero");
+// let num = prompt("inserisci un numero");
+// let i=0;
 // do {
+//     i++;
 //     console.log(i);
-//     i++
-// } while (i <= numero);
-// console.log("ciclo terminato");
+// } while (i<num);
 
 //----------------------------------------------------------------------//
 // Funzione che calcola la somma di due numeri
@@ -476,38 +465,34 @@
 // somma di due numeri.
 // ○ Chiamala con vari valori ed esegui dei test.
 
-//  function sommaNumeri(numero1, numero2) {
-//      console.log(numero1 + numero2);
-//      }
-//      sommaNumeri(5,10);
-//      sommaNumeri(4,19);
-//      sommaNumeri(5,40);
-//      sommaNumeri(5,78);
+// function sommaNumeri(num1, num2) {
+//     let somma = num1 + num2;
+//     console.log(somma);
+// }
+// sommaNumeri(10, 5);
+// sommaNumeri(100, 50);
+// sommaNumeri(1000, 500);
+// sommaNumeri("prova", "stringa");
 
 //---------------------------------------------------------------------//
 // Funzione che calcola il quadrato di un numero
 // ○ Scrivi una funzione calcolaQuadrato(numero) che restituisce il quadrato del
 // numero passato come parametro.
-
-    //   function calcolaQuadrato(numero) {
-    //    console.log(numero*numero)
-    //   }
-    //   calcolaQuadrato(100)
-    //   calcolaQuadrato(77)
-    //   calcolaQuadrato(907)
-
-
+    //      function calcolaQuadrato(num) {
+    //          let quadrato = num*num;
+    //          console.log(`la potenza di ${num} è ${quadrato}`);        
+    //      }
+    //  calcolaQuadrato(prompt("inserisci un numero"));
+ 
 //-------------------------------------------------------------------------//
 // Funzione che saluta un nome
 // ○ Scrivi una funzione saluta(nome) che prende un nome come parametro e
 // restituisce un saluto personalizzato (esempio: Ciao, Marco!).
 
-
-// function saluta(name) {
-//     console.log(`ciao` + name);
+// function saluto(nome) {
+//     console.log(`weeee ma ciao ${nome}`);
 // }
-// saluta(`jader`);
-// saluta(`luca`);
+// saluto(prompt("Come ti chiami"));
 
 
 //----------------------------------------------------------------------------//
@@ -589,19 +574,23 @@
 // Scrivi una funzione isPalindromo(numero) che verifica se un numero è palindromo
 // (legge uguale sia da sinistra che da destra).
 // Esempio: isPalindromo(121) restituisce true, isPalindromo(123) restituisce false.
-// let numero = prompt("Inserisci un numero");
-// function isPalindromo(numero) {
-//     let invertita = "";
-//     for (let i = numero.length -1; i >= 0; i--) {
-//         invertita += numero[i];
-        
-//     }
-//     let result = invertita == numero;
-//     console.log(invertita);
-//     console.log(result);
-//     return invertita;
-// }
-// isPalindromo(numero);
+//  let numero = prompt("Inserisci un numero");
+//  function isPalindromo(numero) {
+//      let invertita = "";
+//      for (let i = numero.length -1; i >= 0; i--) {
+//          invertita += numero[i];
+//      }
+//     //  let result = invertita == numero;
+//     //  console.log(invertita);
+//     //  console.log(result);
+//      if (invertita === numero) {
+//         console.log("Il numero è palindromo");
+//      } else {
+//         console.log("Il numero non è palindromo");
+//      }
+//      return invertita;
+//  }
+//  console.log(isPalindromo(numero));
 
 //--------------------------------------------------------------------------------//
 // Scrivere una funzione che permetta di stampare in console tutti i numeri da 1 a N:
